@@ -89,10 +89,7 @@ The auditor calculates **Differential Cosine Similarity**. A positive score in "
 3.  **Model De-biasing**: Identify and "nullify" specific dimensions that encode undesirable biases without retraining the model.
 4.  **Brand Safety**: Detect if brand embeddings are congregating in high-negative-sentiment dimensions.
 
----
 
-## 📄 License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 *Developed as an implementation of the TKAA methodology for LLM Interpretability.*
