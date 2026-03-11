@@ -2,7 +2,7 @@
 
 [![Ollama](https://img.shields.io/badge/Ollama-Local-blue.svg)](https://ollama.ai/)
 [![Python](https://img.shields.io/badge/Python-3.10+-yellow.svg)](https://www.python.org/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+
 
 An implementation of the **Top-K Activation Analysis (TKAA)** methodology for interpreting and auditing dense word embeddings. This toolkit allows you to "open the black box" of Large Language Model (LLM) embeddings, mapping mathematical dimensions to human-readable semantic concepts and detecting latent social biases.
 
