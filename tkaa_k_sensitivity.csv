@@ -1,0 +1,18 @@
+K,category,count,interp_rate_pct,mean_purity
+5,Anatomy/Medical,3,2.15,0.5455
+5,Chemical -yl/-oyl,44,2.15,0.5455
+5,Legal/Criminal,1,2.15,0.5455
+5,Divination -mancy,1,2.15,0.5455
+5,Plants/Vegetables,3,2.15,0.5455
+5,Programming/OOP,14,2.15,0.5455
+10,Anatomy/Medical,1,1.92,0.4627
+10,Chemical -yl/-oyl,45,1.92,0.4627
+10,Legal/Criminal,1,1.92,0.4627
+10,Divination -mancy,1,1.92,0.4627
+10,Plants/Vegetables,2,1.92,0.4627
+10,Programming/OOP,9,1.92,0.4627
+20,Chemical -yl/-oyl,32,1.27,0.4333
+20,Divination -mancy,1,1.27,0.4333
+20,Programming/OOP,6,1.27,0.4333
+50,Chemical -yl/-oyl,13,0.46,0.4486
+50,Divination -mancy,1,0.46,0.4486

@@ -1,0 +1,8 @@
+observed,p_value,effect_size,null_mean,null_std,ci_95_low,ci_95_high,significant,n_perm,na,nb,label,axis_a,axis_b,axis_c,p_bonferroni,sig_bonferroni
+-0.002033,0.9365,-0.0742,-0.002478,0.027414,-0.056806,0.050869,False,10000,11,12,Gender x STEM Occupations,gender_male,gender_female,occupation_stem,1.0,False
+0.033994,0.221,1.2345,0.003049,0.027537,-0.050203,0.057768,False,10000,12,11,Gender x Care Occupations,gender_female,gender_male,occupation_care,1.0,False
+0.015112,0.5737,0.6072,-0.000119,0.024887,-0.047558,0.047556,False,10000,7,7,Race x Criminal Associations,race_nonwestern,race_western,legal_criminal,1.0,False
+-0.049981,0.2607,-1.7139,-0.031626,0.029162,-0.092087,0.019903,False,10000,5,10,Religion x Negative Sentiment,religion_islam,religion_christian,sentiment_negative,1.0,False
+0.019997,0.1882,1.3884,-0.000151,0.014404,-0.02753,0.027824,False,10000,6,6,Age x Negative Sentiment,age_old,age_young,sentiment_negative,1.0,False
+-0.017852,0.4912,-0.7024,-0.002125,0.025414,-0.051649,0.047537,False,10000,11,12,Gender x Positive Sentiment,gender_male,gender_female,sentiment_positive,1.0,False
+-0.004541,0.8695,-0.1719,-1.8e-05,0.026424,-0.050501,0.050004,False,10000,7,7,Race x Positive Sentiment,race_western,race_nonwestern,sentiment_positive,1.0,False

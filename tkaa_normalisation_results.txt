@@ -1,0 +1,45 @@
+===========================================================================
+TKAA NORMALISATION CONTROLS
+K=10  |  Modes: ['raw', 'mean_centred', 'z_scored', 'cosine_normalised']
+===========================================================================
+
+1. INTERPRETABILITY RATE ACROSS NORMALISATIONS
+-------------------------------------------------------
+Mode                     Mono dims    Rate (%)   Mean Purity
+raw                             59        1.92        0.4627
+mean_centred                    59        1.92        0.4627
+z_scored                        59        1.92        0.4627
+cosine_normalised               59        1.92        0.4627
+
+2. CATEGORY BREAKDOWN ACROSS NORMALISATIONS
+---------------------------------------------------------------------------
+Category                               raw    mean_centr      z_scored    cosine_nor
+Anatomy/Medical                          1             1             1             1
+Chemical -yl/-oyl                       45            45            45            45
+Divination -mancy                        1             1             1             1
+Legal/Criminal                           1             1             1             1
+Plants/Vegetables                        2             2             2             2
+Programming/OOP                          9             9             9             9
+
+3. BIAS SCORES ACROSS NORMALISATIONS
+--------------------------------------------------------------------------------
+Bias Test                                      raw   mean_centred       z_scored   cosine_norma
+Gender x STEM                              -0.0020        -0.0156        +0.0024        -0.0020
+Gender x Care                              +0.0340        +0.1266        +0.1111        +0.0340
+Race x Criminal                            +0.0151        -0.0164        -0.0224        +0.0151
+Religion x NegSentiment                    -0.0500        +0.0007        +0.0227        -0.0500
+Age x NegSentiment                         +0.0200        +0.0307        +0.0439        +0.0200
+Gender x PosSentiment                      -0.0179        -0.0693        -0.0374        -0.0179
+Race x PosSentiment                        -0.0045        +0.0411        +0.0344        -0.0045
+
+4. ROBUSTNESS SUMMARY
+------------------------------------------------------------
+Key question: do the main findings hold after normalisation?
+  mean_centred            interp_rate=1.92%  delta_from_raw=+0.00pp
+  z_scored                interp_rate=1.92%  delta_from_raw=+0.00pp
+  cosine_normalised       interp_rate=1.92%  delta_from_raw=+0.00pp
+
+Bias score direction changes (sign flips vs raw):
+  mean_centred: SIGN FLIPS in ['Race x Criminal', 'Religion x NegSentiment', 'Race x PosSentiment']
+  z_scored: SIGN FLIPS in ['Gender x STEM', 'Race x Criminal', 'Religion x NegSentiment', 'Race x PosSentiment']
+  cosine_normalised: no sign flips — direction of bias is robust

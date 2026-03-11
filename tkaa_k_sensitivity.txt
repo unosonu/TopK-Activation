@@ -1,0 +1,63 @@
+======================================================================
+TKAA K-SENSITIVITY ANALYSIS
+Vocabulary: 3,072 dims  |  K values tested: [5, 10, 20, 50]
+======================================================================
+
+1. INTERPRETABILITY RATE BY K
+--------------------------------------------------
+    K   Monosemantic dims    Rate (%)   Mean Purity
+    5                  66        2.15        0.5455
+   10                  59        1.92        0.4627
+   20                  39        1.27        0.4333
+   50                  14        0.46        0.4486
+
+2. CATEGORY BREAKDOWN BY K
+----------------------------------------------------------------------
+Category                        K=  5  K= 10  K= 20  K= 50
+Anatomy/Medical                     3      1      0      0
+Chemical -yl/-oyl                  44     45     32     13
+Divination -mancy                   1      1      1      1
+Legal/Criminal                      1      1      0      0
+Plants/Vegetables                   3      2      0      0
+Programming/OOP                    14      9      6      0
+
+3. STABILITY: JACCARD OVERLAP OF MONOSEMANTIC DIM SETS
+------------------------------------------------------------
+(How stable is the set of monosemantic dims across K values?)
+  K=5 vs K=10:  Jaccard=0.603  (shared=47 dims)
+  K=5 vs K=20:  Jaccard=0.438  (shared=32 dims)
+  K=5 vs K=50:  Jaccard=0.212  (shared=14 dims)
+  K=10 vs K=20:  Jaccard=0.633  (shared=38 dims)
+  K=10 vs K=50:  Jaccard=0.237  (shared=14 dims)
+  K=20 vs K=50:  Jaccard=0.359  (shared=14 dims)
+
+4. SAMPLE: TOP MONOSEMANTIC DIMS AT EACH K (first 5)
+----------------------------------------------------------------------
+
+  K=5:
+    Dim 0013  [Anatomy/Medical]  purity=0.40  words=syllabe, trachea, ergo, facto
+    Dim 0014  [Anatomy/Medical]  purity=0.40  words=col, pulmonary, prostate, practisour
+    Dim 0020  [Chemical -yl/-oyl]  purity=0.80  words=butyl, monocotyl, methyl, ethyl
+    Dim 0029  [Anatomy/Medical]  purity=0.40  words=ileocaecal, coluber, brill, hypodermic
+    Dim 0031  [Legal/Criminal]  purity=0.60  words=demagog, poly, misdemeanor, manslaughter
+
+  K=10:
+    Dim 0013  [Anatomy/Medical]  purity=0.40  words=syllabe, trachea, ergo, facto
+    Dim 0020  [Chemical -yl/-oyl]  purity=0.60  words=butyl, monocotyl, methyl, ethyl
+    Dim 0031  [Legal/Criminal]  purity=0.50  words=demagog, poly, misdemeanor, manslaughter
+    Dim 0033  [Divination -mancy]  purity=0.80  words=belomancy, tetracarpel, psychomancy, cartomancy
+    Dim 0046  [Plants/Vegetables]  purity=0.50  words=pen, milling, lettuce, repealability
+
+  K=20:
+    Dim 0020  [Chemical -yl/-oyl]  purity=0.65  words=butyl, monocotyl, methyl, ethyl
+    Dim 0033  [Divination -mancy]  purity=0.85  words=belomancy, tetracarpel, psychomancy, cartomancy
+    Dim 0115  [Chemical -yl/-oyl]  purity=0.35  words=erythroid, dinaphthyl, faulcon, musculophrenic
+    Dim 0197  [Programming/OOP]  purity=0.30  words=protocol, ology, type, extension
+    Dim 0233  [Chemical -yl/-oyl]  purity=0.30  words=giffgaff, sulphuryl, ethyl, chrismal
+
+  K=50:
+    Dim 0020  [Chemical -yl/-oyl]  purity=0.50  words=butyl, monocotyl, methyl, ethyl
+    Dim 0033  [Divination -mancy]  purity=0.76  words=belomancy, tetracarpel, psychomancy, cartomancy
+    Dim 0381  [Chemical -yl/-oyl]  purity=0.46  words=nasoseptal, undecyl, nonyl, salicylal
+    Dim 0665  [Chemical -yl/-oyl]  purity=0.40  words=trinitrophenol, pospolite, stearyl, pentyl
+    Dim 1106  [Chemical -yl/-oyl]  purity=0.30  words=sours, isopepsin, navals, indazol
