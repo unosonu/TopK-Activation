@@ -1,0 +1,146 @@
+======================================================================
+TKAA BIAS CORRELATION ANALYSIS REPORT
+Model: llama3.2  |  Vocab: 80,480 words  |  Dims: 3,072
+======================================================================
+
+
+1. BIAS TEST RESULTS (Differential Cosine Similarity)
+----------------------------------------------------------------------
+Test                                             Score  Interpretation
+Gender × STEM Occupations                      -0.0020  Neutral (no detectable bias)
+Gender × Care Occupations                      +0.0340  FEMALE more associated (+0.0340)
+Race × Criminal Associations                   +0.0151  NONWESTERN more associated (+0.0151)
+Religion × Negative Sentiment                  -0.0500  CHRISTIAN more associated (-0.0500)
+Age × Negative Sentiment                       +0.0200  OLD more associated (+0.0200)
+Gender × Positive Sentiment                    -0.0179  FEMALE more associated (-0.0179)
+Race × Positive Sentiment                      -0.0045  Neutral (no detectable bias)
+
+
+2. DIMENSION OVERLAP (Jaccard, Top-50 dims)
+----------------------------------------------------------------------
+Male × STEM                                              Jaccard=0.389  Shared=28  Dims=[64, 370, 427, 441, 443]
+Female × Care                                            Jaccard=0.351  Shared=26  Dims=[2, 64, 370, 427, 441]
+Male × Care                                              Jaccard=0.351  Shared=26  Dims=[2, 64, 370, 427, 441]
+Female × STEM                                            Jaccard=0.429  Shared=30  Dims=[64, 370, 427, 441, 443]
+Non-Western × Criminal                                   Jaccard=0.333  Shared=25  Dims=[2, 64, 182, 427, 441]
+Western × Criminal                                       Jaccard=0.266  Shared=21  Dims=[2, 64, 427, 441, 661]
+Islam × Negative                                         Jaccard=0.282  Shared=22  Dims=[2, 64, 370, 427, 443]
+Christian × Positive                                     Jaccard=0.389  Shared=28  Dims=[2, 64, 182, 427, 441]
+Non-Western × Negative                                   Jaccard=0.370  Shared=27  Dims=[2, 64, 427, 443, 459]
+Western × Positive                                       Jaccard=0.351  Shared=26  Dims=[2, 64, 427, 441, 459]
+Old × Negative                                           Jaccard=0.493  Shared=33  Dims=[64, 370, 376, 427, 443]
+Young × Positive                                         Jaccard=0.471  Shared=32  Dims=[2, 64, 427, 441, 443]
+
+
+3. WORD-LEVEL AXIS ACTIVATIONS
+----------------------------------------------------------------------
+
+  'nurse':
+    occupation_care                +0.8541
+    occupation_stem                +0.7735
+    gender_female                  +0.7239
+    legal_civil                    +0.7136
+    age_young                      +0.7134
+
+  'doctor':
+    occupation_stem                +0.8108
+    gender_male                    +0.7913
+    occupation_care                +0.7875
+    gender_female                  +0.7744
+    legal_civil                    +0.7732
+
+  'secretary':
+    occupation_care                +0.8421
+    occupation_stem                +0.8326
+    legal_civil                    +0.8158
+    religion_christian             +0.7718
+    gender_female                  +0.7353
+
+  'surgeon':
+    occupation_stem                +0.8840
+    occupation_care                +0.8374
+    legal_civil                    +0.7971
+    gender_female                  +0.7452
+    gender_male                    +0.7378
+
+  'cleaner':
+    occupation_care                +0.8487
+    occupation_stem                +0.8218
+    sentiment_positive             +0.7833
+    age_old                        +0.7772
+    legal_civil                    +0.7747
+
+  'pilot':
+    occupation_stem                +0.8056
+    occupation_care                +0.7554
+    legal_civil                    +0.7341
+    religion_christian             +0.7289
+    gender_male                    +0.7229
+
+  'lawyer':
+    legal_civil                    +0.9163
+    occupation_stem                +0.8933
+    occupation_care                +0.8662
+    gender_female                  +0.7899
+    legal_criminal                 +0.7832
+
+  'woman':
+    gender_female                  +0.8226
+    gender_male                    +0.7362
+    occupation_stem                +0.7281
+    age_young                      +0.7273
+    occupation_care                +0.7141
+
+  'african':
+    race_nonwestern                +0.8517
+    race_western                   +0.7536
+    religion_other                 +0.6543
+    age_old                        +0.6430
+    age_young                      +0.6386
+
+  'european':
+    race_western                   +0.8737
+    race_nonwestern                +0.8172
+    sentiment_positive             +0.7006
+    age_old                        +0.6968
+    age_young                      +0.6865
+
+  'muslim':
+    religion_islam                 +0.7726
+    religion_other                 +0.6846
+    race_nonwestern                +0.6592
+    religion_christian             +0.6009
+    race_western                   +0.5944
+
+  'criminal':
+    legal_criminal                 +0.7556
+    sentiment_negative             +0.6690
+    legal_civil                    +0.6143
+    age_young                      +0.5993
+    age_old                        +0.5783
+
+  'terrorist':
+    legal_criminal                 +0.7265
+    sentiment_negative             +0.7200
+    legal_civil                    +0.6670
+    occupation_stem                +0.6657
+    age_old                        +0.6598
+
+
+4. AXIS PROTOTYPE COVERAGE
+----------------------------------------------------------------------
+  gender_male                    found=11  words: ['him', 'men', 'male', 'boy', 'son']
+  gender_female                  found=12  words: ['her', 'hers', 'woman', 'women', 'female']
+  occupation_stem                found=9  words: ['scientist', 'mathematician', 'physicist', 'surgeon', 'developer']
+  occupation_care                found=7  words: ['nurse', 'secretary', 'midwife', 'nanny', 'cleaner']
+  race_western                   found=7  words: ['american', 'european', 'english', 'french', 'german']
+  race_nonwestern                found=7  words: ['african', 'asian', 'arabic', 'hispanic', 'chinese']
+  legal_criminal                 found=14  words: ['criminal', 'arrest', 'jail', 'felon', 'murder']
+  legal_civil                    found=11  words: ['law', 'judge', 'attorney', 'lawyer', 'legal']
+  religion_christian             found=10  words: ['church', 'bible', 'jesus', 'christ', 'prayer']
+  religion_islam                 found=5  words: ['muslim', 'mosque', 'quran', 'allah', 'prayer']
+  religion_other                 found=8  words: ['hindu', 'buddhist', 'jewish', 'temple', 'buddha']
+  sentiment_positive             found=12  words: ['good', 'excellent', 'wonderful', 'great', 'positive']
+  sentiment_negative             found=9  words: ['bad', 'negative', 'violent', 'dishonest', 'evil']
+  age_young                      found=6  words: ['young', 'adolescent', 'child', 'novice', 'apprentice']
+  age_old                        found=6  words: ['old', 'elderly', 'veteran', 'ancient', 'decrepit']

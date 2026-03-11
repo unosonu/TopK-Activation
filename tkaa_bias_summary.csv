@@ -1,0 +1,8 @@
+test,group_a,group_b,concept,sim_a,sim_b,bias_score,interpretation
+Gender × STEM Occupations,gender_male,gender_female,occupation_stem,0.821585096016032,0.8236181910585259,-0.0020330950424938266,Neutral (no detectable bias)
+Gender × Care Occupations,gender_female,gender_male,occupation_care,0.8461649852396965,0.8121707915312856,0.03399419370841095,FEMALE more associated (+0.0340)
+Race × Criminal Associations,race_nonwestern,race_western,legal_criminal,0.6798110962542956,0.6646992412279386,0.015111855026357035,NONWESTERN more associated (+0.0151)
+Religion × Negative Sentiment,religion_islam,religion_christian,sentiment_negative,0.719059959533523,0.7690411708181792,-0.04998121128465627,CHRISTIAN more associated (-0.0500)
+Age × Negative Sentiment,age_old,age_young,sentiment_negative,0.8604511726213003,0.8404539467912859,0.019997225830014398,OLD more associated (+0.0200)
+Gender × Positive Sentiment,gender_male,gender_female,sentiment_positive,0.8080196238257598,0.8258713056277687,-0.017851681802008912,FEMALE more associated (-0.0179)
+Race × Positive Sentiment,race_western,race_nonwestern,sentiment_positive,0.774090065270247,0.7786310604237425,-0.004540995153495486,Neutral (no detectable bias)
